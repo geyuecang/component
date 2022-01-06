@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <com.gc.sam.banner.looper.LooperView
+        android:id="@+id/looper_vp_banner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="H,702:200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.gc.sam.banner.LooperCircleIndicator
+        android:id="@+id/looper_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:ci_animator="@anim/widget_indicator_no_animator"
+        app:ci_drawable="@drawable/bg_indicator_widget_white_radius"
+        app:ci_drawable_unselected="@drawable/bg_indicator_widget_4cffffff_radius"
+        app:ci_height="4dp"
+        app:ci_margin="6dp"
+        app:ci_selected_height="4dp"
+        app:ci_selected_width="12dp"
+        android:layout_marginTop="8dp"
+        app:ci_width="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/looper_vp_banner"
+        app:layout_constraintStart_toStartOf="@+id/looper_vp_banner"
+        app:layout_constraintEnd_toEndOf="@+id/looper_vp_banner"/>
+</merge>
